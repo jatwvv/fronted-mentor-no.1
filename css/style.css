@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+*::selection {
+    color: black;
+    background-color: rgb(166, 166, 181);
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    background-color:hsl(210, 60%, 98%);
+}
+img {
+    cursor: pointer;
+}
+.container {
+    background-color: #ffffff;
+    width: 500px;
+    height: 680px;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0 0 8px #ddd;
+    position: relative;
+}
+.container .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 20px;
+}
+.container .head .title {
+    display: flex;
+    align-items: center;
+}
+.container .head .title span{
+    border-radius: 5px;
+    border: 1px solid  hsl(219, 85%, 26%);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 1px 10px;
+    background-color: hsl(219, 85%, 26%);
+    color: #ffffff;
+    margin-left: 9px;
+    font-weight: bold;
+}
+.container .head a {
+    text-decoration: none;
+    color: hsl(219, 87%, 30%);
+    letter-spacing: -0.5px;
+    font-weight: 500;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    font-size: 14px;
+}
+.container .head a:hover {
+    color: black;
+}
+.container .box {
+    display: flex;
+    align-items: center;
+    background-color: hsla(0, 0%, 92%, 0.515);
+    margin: 10px 20px;
+    padding: 7px;
+    padding-left: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.container .not {
+    background-color: #ffffff;
+    padding: 7px;
+    padding-left: 10px;
+}
+.container .box .img {
+    display: flex;
+    align-items: center;
+}
+.container .box .img img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 45px;
+}
+.container .box .content {
+    font-size: 11px;
+    margin-left: 15px;
+    position: relative;
+}
+.container .box .content:not(.not):before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: hsl(1, 90%, 64%);
+    border-radius: 50%;
+    right: -4px;
+    top: 5px;
+}
+.container .box .content p {
+    margin: 0;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    color: #757575;
+    font-weight: 500;
+}
+.container .box .content p .name {
+    font-weight: bold;
+    color: black;
+}
+.container .box .content p .post {
+    font-weight: bold;
+    color: hsl(219, 83%, 26%);
+    cursor: pointer;
+}
+.container .box .content p .post:hover {
+    color: black;
+}
+.container .box .content h6 {
+    margin: 0;
+    color: #a3a3a3;
+    font-weight: 500;
+    font-size: 12px;
+}
+.container .box .content p .name {
+    font-weight: bold;
+    color:black;
+    cursor: pointer;
+}
+.container .box .content p .name:hover {
+    color:  hsl(219, 83%, 26%);
+}
+.container .box .content .message {
+    border: 1px solid #86b1be3b;
+    border-radius: 6px;
+    color: #7e7e7e;
+    padding: 10px 10px;
+    margin-top: 15px;
+    background-color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.container .box .up {
+    position: relative;
+    top: -35px;
+}
+.container .not .content .message:hover {
+    background-color: #86b1be3b;
+    cursor: pointer;
+    border-color: transparent;
+}
+.container .not .chess {
+    border-radius: 10%;
+    width: 45px;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    right: -80px;
+    position: relative;
+}
+.container .box .content p .bold {
+    font-weight: bold;
+    color: rgb(111, 111, 111);
+}
+@media (max-width:375px) {
+    .container {
+        width: fit-content;
+        margin-top: 0;
+    }
+    .container .not .chess {
+        position: static;
+        width: 35px;
+    }
+}
+@media (max-width:767px) {
+    .container {
+        width: fit-content;
+        margin-top: 0;
+    }
+    .container .not .chess {
+        position: static;
+        width: 35px;
+    }
+}
